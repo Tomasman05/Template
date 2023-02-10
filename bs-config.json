@@ -1,0 +1,4 @@
+{
+    "server":["src","node_modules/bootstrap/dist/css"],
+    "port":3000
+}
