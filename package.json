@@ -5,15 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "lite-server",
+    "build:src": "copyfiles -u 1 src/**/*.{html,js,css} dist",
+    "build:bscss": "copyfiles -u 3 node_modules/bootstrap/dist/css/bootstrap.css dist",
+    "build:bsjs": "copyfiles -u 3 node_modules/bootstrap/dist/js/bootstrap.js dist",
+    "build": "npm-run-all build:src build:bscss build:bsjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "lite-server": "^2.6.1"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "npm-run-all": "^4.1.5"
   }
 }
