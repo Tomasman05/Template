@@ -8,5 +8,5 @@ var conn = new ftp({
     secure:true,
     secureOptions: {rejectUnauthorized: false}
 })
-fs.src( [ './src/**' ], { buffer: false } )
+fs.src( [ './dist/**' ], { buffer: false } )
     .pipe( conn.dest( '/htdocs/valami' ) );
