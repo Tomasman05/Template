@@ -10,7 +10,8 @@
     "build:bscss": "copyfiles -u 3 node_modules/bootstrap/dist/css/bootstrap.css dist",
     "build:bsjs": "copyfiles -u 3 node_modules/bootstrap/dist/js/bootstrap.js dist",
     "build": "npm-run-all build:src build:bscss build:bsjs",
-    "deploy": "node vinyl-ftp.js"
+    "deploy": "node vinyl-ftp.js",
+    "api": "hai-server --watch database.json --port 8000"
   },
   "keywords": [],
   "author": "",
